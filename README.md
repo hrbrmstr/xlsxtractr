@@ -1,6 +1,8 @@
 
 `xlsxtractr` : Extract Things From Excel (xlsx) Files
 
+Inspired by [this SO question](http://stackoverflow.com/q/39529302/1457051).
+
 The following functions are implemented:
 
 -   `extract_formulas`: Extract formulas from an Excel workbook sheet
@@ -89,7 +91,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Fri Sep 16 09:47:15 2016"
+    ## [1] "Fri Sep 16 09:52:58 2016"
 
 ``` r
 test_dir("tests/")

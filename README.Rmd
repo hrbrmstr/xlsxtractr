@@ -4,6 +4,8 @@ output: rmarkdown::github_document
 
 `xlsxtractr` : Extract Things From Excel (xlsx) Files
 
+Inspired by [this SO question](http://stackoverflow.com/q/39529302/1457051).
+
 The following functions are implemented:
 
 - `extract_formulas`:	Extract formulas from an Excel workbook sheet
