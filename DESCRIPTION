@@ -1,0 +1,20 @@
+Package: xlsxtractr
+Type: Package
+Title: Extract Things From Excel (xlsx) Files
+Version: 0.1.0
+Date: 2016-09-16
+Author: Bob Rudis (bob@@rud.is)
+Maintainer: Bob Rudis <bob@rud.is>
+Description: Extract Things From Excel (xlsx) Files
+URL: http://gitlab.com/hrbrmstr/xlsxtractr
+BugReports: https://gitlab.com/hrbrmstr/xlsxtractr/issues
+License: AGPL
+Suggests:
+    testthat
+Depends:
+    R (>= 3.0.0)
+Imports:
+    purrr,
+    xml2,
+    dplyr
+RoxygenNote: 5.0.1

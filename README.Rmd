@@ -1,0 +1,59 @@
+---
+output: rmarkdown::github_document
+---
+
+`xlsxtractr` : Extract Things From Excel (xlsx) Files
+
+The following functions are implemented:
+
+- `extract_formulas`:	Extract formulas from an Excel workbook sheet
+- `read_xlsx`:	Read in an Excel document for various extractions
+
+The following data sets are included:
+
+- `system.file("extdata/wb.xlsx", package="xlsxtractr")`: sample xlsx file
+
+### Installation
+
+```{r eval=FALSE}
+devtools::install_git("https://gitlab.com/hrbrmstr/xlsxtractr.git")
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+options(width=120)
+```
+
+### Usage
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
+library(xlsxtractr)
+
+# current verison
+packageVersion("xlsxtractr")
+
+doc <- read_xlsx(system.file("extdata/wb.xlsx", package="xlsxtractr"))
+
+class(doc)
+
+print(doc)
+
+length(doc)
+
+extract_formulas(doc, 1)
+
+extract_formulas(doc, 2)
+
+extract_formulas(doc, 3) # no formula
+```
+
+### Test Results
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
+library(xlsxtractr)
+library(testthat)
+
+date()
+
+test_dir("tests/")
+```
+
