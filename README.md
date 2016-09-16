@@ -14,6 +14,10 @@ The following data sets are included:
 
 ``` r
 devtools::install_git("https://gitlab.com/hrbrmstr/xlsxtractr.git")
+
+# OR
+
+devtools::install_github("hrbrmstr/xlsxtractr")
 ```
 
 ### Usage
@@ -85,7 +89,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Fri Sep 16 09:44:42 2016"
+    ## [1] "Fri Sep 16 09:47:15 2016"
 
 ``` r
 test_dir("tests/")
