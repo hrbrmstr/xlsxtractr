@@ -33,6 +33,7 @@ options(width=120)
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
 library(xlsxtractr)
+library(purrr)
 
 # current verison
 packageVersion("xlsxtractr")
@@ -50,6 +51,8 @@ extract_formulas(doc, 1)
 extract_formulas(doc, 2)
 
 extract_formulas(doc, 3) # no formula
+
+map_df(seq_along(doc), ~extract_formulas(doc, .))
 ```
 
 ### Test Results

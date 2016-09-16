@@ -26,6 +26,7 @@ devtools::install_github("hrbrmstr/xlsxtractr")
 
 ``` r
 library(xlsxtractr)
+library(purrr)
 
 # current verison
 packageVersion("xlsxtractr")
@@ -82,6 +83,20 @@ extract_formulas(doc, 3) # no formula
 
     ## # A tibble: 0 × 0
 
+``` r
+map_df(seq_along(doc), ~extract_formulas(doc, .))
+```
+
+    ## # A tibble: 6 × 3
+    ##   sheet  cell            f
+    ##   <int> <chr>        <chr>
+    ## 1     1    A4   SUM(A1:A3)
+    ## 2     1    B4   SUM(B1:B3)
+    ## 3     1    D4   SUM(A4:B4)
+    ## 4     2   J11  SUM(J8:J10)
+    ## 5     2   K11  SUM(K8:K10)
+    ## 6     2   M11 SUM(J11:K11)
+
 ### Test Results
 
 ``` r
@@ -91,7 +106,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Fri Sep 16 09:52:58 2016"
+    ## [1] "Fri Sep 16 09:56:30 2016"
 
 ``` r
 test_dir("tests/")

@@ -21,6 +21,12 @@ Extract formulas from an Excel workbook sheet
 }
 \examples{
 doc <- read_xlsx(system.file("extdata/wb.xlsx", package="xlsxtractr"))
+
 extract_formulas(doc, 1)
+extract_formulas(doc, 2)
+extract_formulas(doc, 3) # no formula
+
+# gotta extract'em all!
+map_df(seq_along(doc), ~extract_formulas(doc, .))
 }
 
